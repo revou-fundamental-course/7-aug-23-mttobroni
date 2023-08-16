@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <h1> KALKULATOR HITUNG SEGITIGA</h1>
+        </header>
+        <div class="gambarrumus">
+             <img src="/img/rumus-segitiga.png">
+            
+        </div>
+       
+        <h2>keterangan :</h2>     
+        <p>a = panjang sisi a / alas</p>
+        <p>b = panjang sisi b</p>
+        <p>c = panjang sisi c</p>
+        <p>t = tinggi</p>
+        <br>
+        <input type="radio" onclick="tampilkanRumus('luas')" id="menu_segitiga_luas" name="menu_segitiga" value="luas">
+        <label for="menu_segitiga_luas">HITUNG LUAS</label>
+        <br>
+        <input type="radio" onclick="tampilkanRumus('keliling')" id="menu_segitiga_keliling" name="menu_segitiga" value="keliling">
+        <label for="menu_segitiga_keliling">HITUNG KELILING</label><br>
+
+        <div id="luas_segitiga" class="rumus">
+            <p>Rumus luas segitiga yaitu:</p>
+            <p>Luas = 1/2 x a x t</p>
+                            
+            <hr>
+            <h1>HITUNG LUAS SEGITIGA</h1>
+            <input class="input_segitiga" id="input_alas" type="number" placeholder="nilai alas"><br>
+            <input class="input_segitiga"id="input_tinggi" type="number" placeholder="nilai tinggi"><br>
+            <input class="input_segitiga"id="input_luas" type="number" value="0" disabled>
+            <button onclick="hitungLuas()">HITUNG</button>
+            <button onclick="myFunction()">RESET</button>
+        </div>
+
+        <div id="keliling_segitiga" class="rumus">
+            <p>Rumus keliling segitiga yaitu:</p>
+            <p>Keliling = a + b + c</p>
+                
+            <h1>HITUNG KELILING SEGITIGA</h1>
+            <input class="input_segitiga" id="input_sisi_a" type="number" placeholder="nilai sisi a"><br>
+            <input class="input_segitiga" id="input_sisi_b" type="number" placeholder="nilai sisi b"><br>
+            <input class="input_segitiga" id="input_sisi_c" type="number" placeholder="nilai sisi c"><br>
+            <input class="input_segitiga" id="input_keliling" type="number" value="0" disabled>
+            <button onclick="hitungKeliling()">HITUNG</button>
+            <br>
+            <button onclick="myFunction()">RESET</button>
+        </div>
+
+        <script src="/js/script.js"></script>
+    </body>
+</html>
